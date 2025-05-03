@@ -1,0 +1,10 @@
+FROM apache/airflow:2.6.3
+USER root
+RUN apt-get update && apt-get install -y some-package
+USER airflow
+
+
+RUN pip install \
+    apache-airflow-providers-snowflake==3.4.0 \
+    gdown==4.7.1 \
+    pandas==2.0.3

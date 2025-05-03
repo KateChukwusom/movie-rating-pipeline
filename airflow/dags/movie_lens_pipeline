@@ -1,0 +1,17 @@
+[[34m2025-05-02T21:19:47.372+0000[0m] {[34m__init__.py:[0m42} INFO[0m - Loaded API auth backend: [01mairflow.api.auth.backend.session[22m[0m
+Traceback (most recent call last):
+  File "/home/airflow/.local/bin/airflow", line 8, in <module>
+    sys.exit(main())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/__main__.py", line 48, in main
+    args.func(args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_config.py", line 52, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 112, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/dag_command.py", line 154, in dag_trigger
+    replace_microseconds=args.replace_microseconds,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api/client/local_client.py", line 39, in trigger_dag
+    replace_microseconds=replace_microseconds,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api/common/trigger_dag.py", line 119, in trigger_dag
+    raise DagNotFound(f"Dag id {dag_id} not found in DagModel")
+airflow.exceptions.DagNotFound: Dag id 2023-01-01T00:00:00 not found in DagModel

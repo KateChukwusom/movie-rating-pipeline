@@ -1,0 +1,3 @@
+airflow/logs/
+airflow/*.pid
+airflow/airflow-webserver.pid
